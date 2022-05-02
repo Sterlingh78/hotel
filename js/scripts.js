@@ -1,8 +1,5 @@
-// what is the path to the JSON file?
-const jsonURL = "https://sterlingh78.github.io/hotel/js/hoteldata.json"
-
 //Go fetch it and then wait for a response.
-fetch(jsonURL)
+fetch('https://sterlingh78.github.io/hotel/js/hoteldata.json')
   .then((response) => response.json())
   .then((myList) => {
     //Once it comes back, display it to the console.
