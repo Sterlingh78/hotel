@@ -1,0 +1,123 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/*----------- BODY --------------*/
+body {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/*----------- HEADER --------------*/
+header {
+    padding: .5rem 2%;
+    background-color: lighten(gray, 20%);
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+/*----------- NAVIGATION --------------*/
+nav {
+    background-color: lighten(gray, 20%);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    flex-basis: 33.3%;
+}
+nav ul li a {
+    display: block;
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+nav ul li a ion-icon {
+    display: block;
+    font-size: 40px;
+    margin: auto;
+}
+
+nav ul li a:hover {
+    background-color: #eee;
+    color: #333;
+}
+nav ul li.active a {
+    background-color: pink;
+    color: black;
+}
+/*----------- MAIN --------------*/
+main {
+    min-height: 10rem;
+    h2 {
+        padding-left: 2%;
+    }
+}
+div#myCards {
+    display: grid;
+    figure {
+        margin: 0;
+        width: 100%;
+        position: relative;
+        img {
+            width: 100%;
+            border-radius: .5rem;
+        }
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            color: white;
+            width: 100%;
+            padding: .5rem 2vw;
+        }
+    }
+    section {
+        margin-bottom: 1rem;
+        background-color: gray;
+        padding: 2rem;
+        div {
+            display: flex;
+            justify-content: space-between;
+            span {
+                padding-top: 1rem;
+                ion-icon {
+                    font-size: 30px;
+                }
+            }
+            span.white {
+                color: white;
+            }
+        }
+    }
+}
+
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: #ddd;
+    padding: .5rem 2%;
+    text-align: center;
+}
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
